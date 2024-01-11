@@ -1,0 +1,11 @@
+#!/bin/bash -l
+#SBATCH -D /home/dgold/
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=dgold@ucdavis.edu 
+#SBATCH -o /home/dgold/IQtr-o%j.txt
+#SBATCH -e /home/dgold/IQtr-e%j.txt
+#SBATCH -J IQtr
+#SBATCH -t 48:00:00
+cd /home/dgold/23_Cyano_ASR
+PATH=$PATH:/home/dgold/.linuxbrew/bin:/home/dgold/miniconda3/bin
+iqtree -s Bacteria_71_AnvioAlign_ForDavid_final.fa  -alrt 1000 -bb 1000 -nt 16
