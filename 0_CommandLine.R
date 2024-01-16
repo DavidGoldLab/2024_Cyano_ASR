@@ -59,7 +59,7 @@ for (column_name in column_names) {
   # Assign row names to the modified vector
   names(modified_vector) <- rownames(character_matrix)
   # Perform stochastic character mapping (ER Model)
-  sim_result <- make.simmap(tree, modified_vector, method = "ER", nsim = 1000)
+  sim_result <- make.simmap(tree, modified_vector, model = "ER", nsim = 1000)
   # Export density map as PDF
   pdf_name <- paste("density_map_simulation-", column_name, "-ER_Model.pdf", sep = "")
   pdf(pdf_name, width = 8, height = 10)
@@ -67,6 +67,31 @@ for (column_name in column_names) {
   dev.off()
   # Export summary results as PDF
   pdf_name <- paste("node_summary-", column_name, "-ER_Model.pdf", sep = "")
+  pdf(pdf_name, width = 8, height = 10)
+  summary <- plot(summary(sim_result), fsize = 0.5)
+  dev.off()
+}
+
+# Repeat for ARD model
+
+for (column_name in column_names) {
+  # Extract the specified column as a numeric vector while preserving row names
+  modified_vector <- as.numeric(character_matrix[, column_name])
+  # Check for non-numeric elements or missing values
+  if (any(is.na(modified_vector)) || any(!is.finite(modified_vector))) {
+    stop("Vector contains non-numeric or missing values.")
+  }
+  # Assign row names to the modified vector
+  names(modified_vector) <- rownames(character_matrix)
+  # Perform stochastic character mapping (ARD Model)
+  sim_result <- make.simmap(tree, modified_vector, model = "ARD", pi="estimated", nsim = 1000)
+  # Export density map as PDF
+  pdf_name <- paste("density_map_simulation-", column_name, "-ARD_Model.pdf", sep = "")
+  pdf(pdf_name, width = 8, height = 10)
+  density_map <- densityMap(sim_result, fsize = 0.5)
+  dev.off()
+  # Export summary results as PDF
+  pdf_name <- paste("node_summary-", column_name, "-ARD_Model.pdf", sep = "")
   pdf(pdf_name, width = 8, height = 10)
   summary <- plot(summary(sim_result), fsize = 0.5)
   dev.off()
