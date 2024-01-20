@@ -99,6 +99,14 @@ for (column_name in column_names) {
   dev.off()
 }
 
+###############################################
+# Get node summaries (used for select analyses)
+###############################################
+# summarize the results
+summary <- describe.simmap(sim_result)
+# See posterior probabilities of nodes
+summary[["ace"]]
+
 #######################
 # Model fit comparison
 #######################
