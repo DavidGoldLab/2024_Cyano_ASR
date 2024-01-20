@@ -1,4 +1,6 @@
 library(phytools)
+packageVersion("phytools")
+# 2.0.13
 
 # Load the data
 tree <- read.tree(file = "2_Bacteria_71_AnivoAlign.tree")
