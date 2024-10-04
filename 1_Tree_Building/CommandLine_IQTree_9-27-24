@@ -1,0 +1,11 @@
+#!/bin/bash -l
+#SBATCH -D /home/dgold/
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=dgold@ucdavis.edu 
+#SBATCH -o /home/dgold/IQtr-o%j.txt
+#SBATCH -e /home/dgold/IQtr-e%j.txt
+#SBATCH -J IQtr
+#SBATCH -t 90:00:00
+cd /home/dgold/23_Cyano_ASR
+module load iq-tree
+iqtree2 -s CyanosEnvironment.fa  -alrt 1000 -B 1000 -nt 16

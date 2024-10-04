@@ -1,0 +1,470 @@
+IQ-TREE multicore version 2.1.3 COVID-edition for Linux 64-bit built Jun 30 2023
+Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
+Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    cpu-5-81 (AVX2, FMA3, 62 GB RAM)
+Command: iqtree2 -s CyanosEnvironment.fa -alrt 1000 -B 1000 -nt 16
+Seed:    88500 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Tue Oct  1 13:24:01 2024
+Kernel:  AVX+FMA - 16 threads (16 CPU cores detected)
+
+Reading alignment file CyanosEnvironment.fa ... Fasta format detected
+Alignment most likely contains protein sequences
+WARNING: 235 sites contain only gaps or ambiguous characters.
+Alignment has 213 sequences with 25708 columns, 20413 distinct patterns
+14292 parsimony-informative, 4049 singleton sites, 7367 constant sites
+                                                           Gap/Ambiguity  Composition  p-value
+   1  GCA_003242085_ASM324208v1                                   49.31%    failed      0.00%
+   2  GCA_001784535_ASM178453v1                                   59.81%    failed      0.00%
+   3  GCA_016716405_ASM1671640v1                                  47.53%    failed      0.00%
+   4  GCA_002325645_ASM232564v1                                   49.17%    failed      0.00%
+   5  GCA_910586855_MGBC142924                                    51.14%    failed      0.00%
+   6  GCA_017307165_ASM1730716v1                                  45.74%    failed      0.00%
+   7  GCA_012031195_ASM1203119v1                                  57.47%    failed      0.00%
+   8  GCA_020404895_ASM2040489v1                                  48.76%    failed      0.00%
+   9  GCA_017989675_ASM1798967v1                                  51.01%    failed      0.00%
+  10  GCA_002102725_ASM210272v1                                   54.26%    failed      0.00%
+  11  GCA_910587055_MGBC157385                                    55.88%    failed      0.00%
+  12  GCA_002103105_ASM210310v1                                   52.89%    failed      0.00%
+  13  GCA_025055675_ASM2505567v1                                  52.11%    failed      0.00%
+  14  GCA_014380105_ASM1438010v1                                  55.28%    failed      0.00%
+  15  GCA_002291895_ASM229189v1                                   50.03%    failed      0.00%
+  16  GCA_021781555_ASM2178155v1                                  52.31%    failed      0.00%
+  17  GCA_905234915_RUG30175                                      51.54%    failed      0.00%
+  18  GCA_905236205_RUG30328                                      61.43%    failed      0.00%
+  19  GCA_900769355_SRS476195_7                                   56.66%    failed      0.00%
+  20  GCA_012515355_ASM1251535v1                                  60.88%    failed      0.00%
+  21  GCA_003153555_20120700_P3D                                  49.50%    failed      0.00%
+  22  GCA_016721225_ASM1672122v1                                  49.46%    failed      0.00%
+  23  GCA_900771775_SRS820607_32                                  52.91%    failed      0.00%
+  24  GCA_910577635_MGBC104987                                    51.69%    failed      0.00%
+  25  GCA_001899425_ASM189942v1                                   52.38%    failed      0.00%
+  26  GCA_910587375_MGBC159243                                    56.50%    failed      0.00%
+  27  GCA_031398925_ASM3139892v1                                  54.42%    failed      0.00%
+  28  GCA_900769645_SRS476271_96                                  54.05%    failed      0.00%
+  29  GCA_003456125_ASM345612v1                                   57.95%    failed      0.00%
+  30  GCA_900552525_UMGS1517                                      53.05%    failed      0.00%
+  31  GCA_023336205_ASM2333620v1                                  49.04%    failed      0.00%
+  32  GCA_016720765_ASM1672076v1                                  47.88%    failed      0.00%
+  33  GCA_903866275_freshwater_MAG_Umea1_bin_2013                 48.72%    failed      0.00%
+  34  GCA_002102885_ASM210288v1                                   55.01%    failed      0.00%
+  35  GCA_905235825_RUG30286                                      63.46%    failed      0.00%
+  36  GCA_001899315_ASM189931v1                                   49.47%    failed      0.00%
+  37  GCA_910587815_MGBC162268                                    51.37%    failed      0.00%
+  38  GCA_001786555_ASM178655v1                                   56.00%    failed      0.00%
+  39  GCA_000332215_ASM33221v1                                    49.11%    failed      0.00%
+  40  GCA_900767725_SRS476014_35                                  52.77%    failed      0.00%
+  41  GCA_905236505_RUG30356                                      62.62%    failed      0.00%
+  42  GCA_900548405_UMGS1078                                      52.14%    failed      0.00%
+  43  GCA_900769685_SRS476278_40                                  52.10%    failed      0.00%
+  44  GCA_910584405_MGBC124934                                    52.84%    failed      0.00%
+  45  GCA_900767775_SRS476014_4                                   52.89%    failed      0.00%
+  46  GCA_002102815_ASM210281v1                                   55.85%    failed      0.00%
+  47  GCA_002251945_ASM225194v1                                   49.24%    failed      0.00%
+  48  GCA_017888365_ASM1788836v1                                  52.35%    failed      0.00%
+  49  GCA_002102995_ASM210299v1                                   55.06%    failed      0.00%
+  50  GCA_016584665_ASM1658466v1                                  49.20%    failed      0.00%
+  51  GCA_017415185_ASM1741518v1                                  52.03%    failed      0.00%
+  52  GCA_016867265_JGI_2017_08_21                                50.93%    failed      0.00%
+  53  GCA_903819605_freshwater_MAG_3_5_bin_680                    52.67%    failed      0.00%
+  54  GCA_902168245_MAG_Melainabacteria_sp_nbed3b74               48.72%    failed      0.00%
+  55  GCA_910587245_MGBC159851                                    60.25%    failed      0.00%
+  56  GCA_002633155_ASM263315v1                                   72.54%    failed      0.00%
+  57  GCA_001784585_ASM178458v1                                   50.54%    failed      0.00%
+  58  GCA_002102645_ASM210264v1                                   59.98%    failed      0.00%
+  59  GCA_905236775_RUG30312                                      64.84%    failed      0.00%
+  60  GCA_002102905_ASM210290v1                                   56.00%    failed      0.00%
+  61  GCA_001917115_ASM191711v1                                   52.18%    failed      0.00%
+  62  GCA_022984075_ASM2298407v1                                  51.71%    failed      0.00%
+  63  GCA_900772315_SRS820622_21                                  57.34%    failed      0.00%
+  64  GCA_014380935_ASM1438093v1                                  54.42%    failed      0.00%
+  65  GCA_900755955_ERS473294_87                                  54.70%    failed      0.00%
+  66  GCA_910579975_MGBC118087                                    52.79%    failed      0.00%
+  67  GCA_015295985_ASM1529598v1                                  47.32%    failed      0.00%
+  68  GCA_012863495_ASM1286349v1                                  44.75%    failed      0.00%
+  69  GCA_018389385_ASM1838938v1                                  51.16%    failed      0.00%
+  70  GCA_017987375_ASM1798737v1                                  50.46%    failed      0.00%
+  71  GCA_016201905_ASM1620190v1                                  51.02%    failed      0.00%
+  72  GCA_001765415_ASM176541v1                                   52.04%    failed      0.00%
+  73  GCA_016712465_ASM1671246v1                                  47.59%    failed      0.00%
+  74  GCA_017475485_ASM1747548v1                                  54.05%    failed      0.00%
+  75  GCA_001899365_ASM189936v1                                   55.98%    failed      0.00%
+  76  GCA_014377495_ASM1437749v1                                  55.57%    failed      0.00%
+  77  GCA_913773825_maxbin_SP350_1_003_cleaned                    70.42%    failed      0.00%
+  78  GCA_017402995_ASM1740299v1                                  52.08%    failed      0.00%
+  79  GCA_002103035_ASM210303v1                                   58.10%    failed      0.00%
+  80  GCA_900768915_SRS476173_30                                  55.99%    failed      0.00%
+  81  GCA_002102975_ASM210297v1                                   52.72%    failed      0.00%
+  82  GCA_012031145_ASM1203114v1                                  52.61%    failed      0.00%
+  83  GCA_016280955_ASM1628095v1                                  56.73%    failed      0.00%
+  84  GCA_000484535_ASM48453v1                                    52.27%    failed      0.00%
+  85  GCA_900768495_SRS476144_104                                 53.55%    failed      0.00%
+  86  GCA_016788365_ASM1678836v1                                  52.28%    failed      0.00%
+  87  GCA_002102745_ASM210274v1                                   53.85%    failed      0.00%
+  88  GCA_017467305_ASM1746730v1                                  58.79%    failed      0.00%
+  89  GCA_021790035_ASM2179003v1                                  64.43%    failed      0.00%
+  90  GCA_005110395_ASM511039v1                                   51.84%    failed      0.00%
+  91  GCA_910578465_MGBC110388                                    51.26%    failed      0.00%
+  92  GCA_003151275_20120700_P3D                                  47.63%    failed      0.00%
+  93  GCA_002102825_ASM210282v1                                   53.26%    failed      0.00%
+  94  GCA_001784615_ASM178461v1                                   55.20%    failed      0.00%
+  95  GCA_014696345_ASM1469634v1                                  49.70%    failed      0.00%
+  96  GCA_000011385_ASM1138v1                                     52.04%    failed      0.00%
+  97  GCA_003967015_ASM396701v1                                   49.12%    failed      0.00%
+  98  GCA_000332175_ASM33217v1                                    49.76%    failed      0.00%
+  99  GCA_002103075_ASM210307v1                                   52.78%    failed      0.00%
+ 100  GCA_900766705_SRS475613_36                                  53.03%    failed      0.00%
+ 101  GCA_900769015_SRS476188_88                                  53.12%    failed      0.00%
+ 102  GCA_003150395_ASM315039v1                                   57.46%    failed      0.00%
+ 103  GCA_016282705_ASM1628270v1                                  55.73%    failed      0.00%
+ 104  GCA_025056115_ASM2505611v1                                  51.30%    failed      0.00%
+ 105  GCA_016712355_ASM1671235v1                                  47.00%    failed      0.00%
+ 106  GCA_002103135_ASM210313v1                                   56.57%    failed      0.00%
+ 107  GCA_016178265_ASM1617826v1                                  56.30%    failed      0.00%
+ 108  GCA_016283185_ASM1628318v1                                  57.86%    failed      0.00%
+ 109  GCA_003258795_ASM325879v1                                   53.23%    failed      0.00%
+ 110  GCA_006937785_ASM693778v1                                   49.11%    failed      0.00%
+ 111  GCA_001873375_ASM187337v1                                   49.63%    failed      0.00%
+ 112  GCA_002914585_ASM291458v1                                   49.05%    failed      0.00%
+ 113  GCA_013285545_ASM1328554v1                                  54.61%    failed      0.00%
+ 114  GCA_903839075_freshwater_MAG_Umea1p3_bin_338                48.72%    failed      0.00%
+ 115  GCA_021533835_ASM2153383v1                                  46.23%    failed      0.00%
+ 116  GCA_949127685_PMM_0068                                      53.39%    failed      0.00%
+ 117  GCA_001784555_ASM178455v1                                   49.84%    failed      0.00%
+ 118  GCA_016716945_ASM1671694v1                                  49.29%    failed      0.00%
+ 119  GCA_002083825_ASM208382v1                                   52.80%    failed      0.00%
+ 120  GCA_910577515_MGBC104636                                    50.78%    failed      0.00%
+ 121  GCA_017303615_ASM1730361v1                                  49.80%    failed      0.00%
+ 122  GCA_003249015_ASM324901v1                                   49.18%    failed      0.00%
+ 123  GCA_900766355_SRS475537_58                                  53.89%    failed      0.00%
+ 124  GCA_900772035_SRS820614_61                                  60.11%    failed      0.00%
+ 125  GCA_003242885_ASM324288v1                                   47.86%    failed      0.00%
+ 126  GCA_014379585_ASM1437958v1                                  53.42%    failed      0.00%
+ 127  GCA_002102735_ASM210273v1                                   53.07%    failed      0.00%
+ 128  GCA_003503675_ASM350367v1                                   53.45%    failed      0.00%
+ 129  GCA_016287985_ASM1628798v1                                  57.66%    failed      0.00%
+ 130  GCA_016288515_ASM1628851v1                                  62.92%    failed      0.00%
+ 131  GCA_001786505_ASM178650v1                                   50.54%    failed      0.00%
+ 132  GCA_002103055_ASM210305v1                                   52.00%    failed      0.00%
+ 133  GCA_004769115_ASM476911v1                                   47.12%    failed      0.00%
+ 134  GCA_003149375_ASM314937v1                                   48.47%    failed      0.00%
+ 135  GCA_018780035_ASM1878003v1                                  52.03%    failed      0.00%
+ 136  GCA_910577395_MGBC104891                                    51.42%    failed      0.00%
+ 137  GCA_002783405_ASM278340v1                                   52.15%    failed      0.00%
+ 138  GCA_002102795_ASM210279v1                                   55.38%    failed      0.00%
+ 139  GCA_016718315_ASM1671831v1                                  48.06%    failed      0.00%
+ 140  GCA_002102875_ASM210287v1                                   53.21%    failed      0.00%
+ 141  GCA_001899335_ASM189933v1                                   53.16%    failed      0.00%
+ 142  GCA_000013225_ASM1322v1                                     47.47%    failed      0.00%
+ 143  GCA_905234865_RUG30176                                      51.84%    failed      0.00%
+ 144  GCA_018695135_ASM1869513v1                                  50.67%    failed      0.00%
+ 145  GCA_001870225_ASM187022v1                                   52.47%    failed      0.00%
+ 146  GCA_900770525_SRS476326_8                                   52.69%    failed      0.00%
+ 147  GCA_004769095_ASM476909v1                                   50.46%    failed      0.00%
+ 148  GCA_016699165_ASM1669916v1                                  48.31%    failed      0.01%
+ 149  GCA_905235155_RUG30213                                      52.76%    failed      0.00%
+ 150  GCA_016212515_ASM1621251v1                                  47.40%    failed      0.00%
+ 151  GCA_016706695_ASM1670669v1                                  50.61%    failed      0.00%
+ 152  GCA_002102985_ASM210298v1                                   53.20%    failed      0.00%
+ 153  GCA_003258725_ASM325872v1                                   53.13%    failed      0.00%
+ 154  GCA_021018745_ASM2101874v1                                  51.44%    failed      0.00%
+ 155  GCA_949127895_PMM_0042                                      51.21%    failed      0.00%
+ 156  GCA_905236055_RUG30317                                      58.30%    failed      0.00%
+ 157  GCA_031399965_ASM3139996v1                                  52.45%    failed      0.00%
+ 158  GCA_002102955_ASM210295v1                                   58.11%    failed      0.00%
+ 159  GCA_017560095_ASM1756009v1                                  52.65%    failed      0.00%
+ 160  GCA_003963305_ASM396330v1                                   48.11%    failed      0.00%
+ 161  GCA_002102805_ASM210280v1                                   52.73%    failed      0.00%
+ 162  GCA_017520125_ASM1752012v1                                  68.34%    failed      0.00%
+ 163  Gloeobacterales_Larsen_GCA_011331945_ASM1133194v1_genomic   67.08%    failed      0.00%
+ 164  GCA_905236155_RUG30322                                      60.74%    failed      0.00%
+ 165  GCA_020404105_ASM2040410v1                                  49.17%    failed      0.00%
+ 166  GCA_017998685_ASM1799868v1                                  50.82%    failed      0.00%
+ 167  GCA_013285555_ASM1328555v1                                  52.63%    failed      0.00%
+ 168  GCA_910588555_MGBC145961                                    52.89%    failed      0.00%
+ 169  GCA_016193285_ASM1619328v1                                  50.33%    failed      0.00%
+ 170  GCA_001786525_ASM178652v1                                   65.19%    failed      0.00%
+ 171  GCA_002103085_ASM210308v1                                   52.68%    failed      0.00%
+ 172  GCA_017452865_ASM1745286v1                                  56.11%    failed      0.00%
+ 173  GCA_900753735_ERS396384_76                                  56.72%    failed      0.00%
+ 174  GCA_002102895_ASM210289v1                                   56.59%    failed      0.00%
+ 175  GCA_014696925_ASM1469692v1                                  49.18%    failed      0.00%
+ 176  GCA_927797885_Thermomargarita_ahousahtiae_VI4D9             51.77%    failed      0.00%
+ 177  GCA_900767135_SRS475682_56                                  58.74%    failed      0.00%
+ 178  GCA_012965515_ASM1296551v1                                  57.10%    failed      0.00%
+ 179  GCA_001899385_ASM189938v1                                   53.03%    failed      0.00%
+ 180  GCA_910587175_MGBC161128                                    52.34%    failed      0.00%
+ 181  GCA_016867235_JGI_2017_08_21                                50.00%    failed      0.00%
+ 182  GCA_900755835_ERS473266_20                                  54.34%    failed      0.00%
+ 183  GCA_900754375_ERS396486_5                                   51.67%    failed      0.00%
+ 184  GCA_013288645_ASM1328864v1                                  52.53%    failed      0.00%
+ 185  GCA_002102715_ASM210271v1                                   57.96%    failed      0.00%
+ 186  GCA_903826385_freshwater_MAG_Umea1p2_bin_0125               48.72%    failed      0.00%
+ 187  GCA_004769085_ASM476908v1                                   50.22%    failed      0.00%
+ 188  GCA_000013205_ASM1320v1                                     47.53%    failed      0.00%
+ 189  GCA_003249035_ASM324903v1                                   50.81%    failed      0.00%
+ 190  GCA_001784565_ASM178456v1                                   57.24%    failed      0.00%
+ 191  GCA_900753705_ERS396380_6                                   58.62%    failed      0.00%
+ 192  GCA_900772105_SRS820617_72                                  63.38%    failed      0.00%
+ 193  GCA_016714375_ASM1671437v1                                  48.74%    failed      0.00%
+ 194  GCA_002861535_ASM286153v1                                   57.69%    failed      0.00%
+ 195  GCA_014377055_ASM1437705v1                                  56.91%    failed      0.00%
+ 196  GCA_016719695_ASM1671969v1                                  47.63%    failed      0.00%
+ 197  GCA_910583875_MGBC124931                                    51.66%    failed      0.00%
+ 198  GCA_003258735_ASM325873v1                                   53.01%    failed      0.00%
+ 199  GCA_025062155_ASM2506215v1                                  61.13%    failed      0.00%
+ 200  GCA_013216135_ASM1321613v1                                  48.95%    failed      0.00%
+ 201  GCA_005110385_ASM511038v1                                   50.41%    failed      0.00%
+ 202  GCA_003258785_ASM325878v1                                   53.12%    failed      0.00%
+ 203  GCA_900761525_SRS077392_71                                  56.33%    failed      0.00%
+ 204  GCA_900548375_UMGS1079                                      52.00%    failed      0.00%
+ 205  GCA_900752845_ERS396310_11                                  54.48%    failed      0.00%
+ 206  GCA_012031565_ASM1203156v1                                  52.26%    failed      0.00%
+ 207  GCA_022848905_ASM2284890v1                                  48.41%    failed      0.00%
+ 208  GCA_002482705_ASM248270v1                                   58.58%    failed      0.00%
+ 209  GCA_910583725_MGBC122484                                    51.63%    failed      0.00%
+ 210  GCA_017744355_ASM1774435v1                                  53.71%    failed      0.00%
+ 211  GCA_900761225_SRS050299_2                                   54.91%    failed      0.00%
+ 212  GCA_903835245_freshwater_MAG_Umea_bin_03849                 48.72%    failed      0.00%
+ 213  GCA_016191155_ASM1619115v1                                  57.33%    failed      0.00%
+WARNING: 163 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                                                       53.33%  213 sequences failed composition chi2 test (p-value<5%; df=19)
+NOTE: GCA_903826385_freshwater_MAG_Umea1p2_bin_0125 is identical to GCA_903866275_freshwater_MAG_Umea1_bin_2013 but kept for subsequent analysis
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 2.353 seconds
+Perform fast likelihood tree search using LG+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -1577701.506
+Optimal log-likelihood: -1577701.334
+Proportion of invariable sites: 0.049
+Gamma shape alpha: 0.832
+Parameters optimization took 1 rounds (9.081 sec)
+Time for fast ML tree search: 93.141 seconds
+
+NOTE: ModelFinder requires 6802 MB RAM!
+ModelFinder will test up to 702 protein models (sample size: 25708) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  LG            1695443.063  423 3391732.127  3391746.314  3395181.505
+  2  LG+I          1675399.445  424 3351646.889  3351661.144  3355104.422
+  3  LG+G4         1579284.163  424 3159416.325  3159430.580  3162873.858
+  4  LG+I+G4       1577701.334  425 3156252.669  3156266.991  3159718.356
+  5  LG+R2         1608748.509  425 3218347.018  3218361.340  3221812.705
+  6  LG+R3         1586935.341  427 3174724.682  3174739.140  3178206.678
+  7  LG+R4         1579186.982  429 3159231.964  3159246.559  3162730.269
+  8  LG+R5         1575903.920  431 3152669.839  3152684.572  3156184.454
+  9  LG+R6         1574461.961  433 3149789.921  3149804.792  3153320.845
+ 10  LG+R7         1573554.596  435 3147979.192  3147994.201  3151526.424
+ 11  LG+R8         1573164.891  437 3147203.782  3147218.931  3150767.324
+ 12  LG+R9         1573046.126  439 3146970.252  3146985.541  3150550.103
+ 13  LG+R10        1573006.641  441 3146895.282  3146910.711  3150491.442
+ 26  LG+F+R10      1574035.276  460 3148990.551  3149007.350  3152741.648
+ 39  WAG+R10       1577866.017  441 3156614.035  3156629.464  3160210.195
+ 52  WAG+F+R10     1578982.358  460 3158884.716  3158901.515  3162635.813
+ 65  JTT+R10       1586952.810  441 3174787.620  3174803.050  3178383.780
+ 78  JTT+F+R10     1586660.395  460 3174240.790  3174257.589  3177991.887
+ 91  Q.pfam+R10    1572673.110  441 3146228.220  3146243.650  3149824.380
+104  Q.pfam+F+R10  1573620.480  460 3148160.960  3148177.759  3151912.056
+117  Q.bird+R10    1624357.718  441 3249597.436  3249612.866  3253193.596
+130  Q.bird+F+R10  1625251.575  460 3251423.151  3251439.950  3255174.247
+143  Q.mammal+R10  1609726.636  441 3220335.273  3220350.702  3223931.433
+156  Q.mammal+F+R10 1609423.688  460 3219767.377  3219784.176  3223518.473
+169  Q.insect+R10  1574947.205  441 3150776.410  3150791.839  3154372.570
+182  Q.insect+F+R10 1576470.429  460 3153860.858  3153877.657  3157611.955
+195  Q.plant+R10   1592832.655  441 3186547.309  3186562.739  3190143.469
+208  Q.plant+F+R10 1594049.312  460 3189018.624  3189035.423  3192769.720
+221  Q.yeast+R10   1573913.535  441 3148709.070  3148724.500  3152305.230
+234  Q.yeast+F+R10 1574891.767  460 3150703.534  3150720.333  3154454.631
+247  JTTDCMut+R10  1586542.719  441 3173967.439  3173982.868  3177563.599
+260  JTTDCMut+F+R10 1586182.883  460 3173285.766  3173302.564  3177036.862
+273  DCMut+R10     1594242.908  441 3189367.816  3189383.245  3192963.975
+286  DCMut+F+R10   1590511.188  460 3181942.375  3181959.174  3185693.471
+299  VT+R10        1579875.152  441 3160632.305  3160647.734  3164228.464
+312  VT+F+R10      1580913.800  460 3162747.601  3162764.400  3166498.697
+325  PMB+R10       1592723.768  441 3186329.536  3186344.965  3189925.696
+338  PMB+F+R10     1590376.239  460 3181672.478  3181689.277  3185423.575
+351  Blosum62+R10  1591247.209  441 3183376.417  3183391.847  3186972.577
+364  Blosum62+F+R10 1590992.287  460 3182904.573  3182921.372  3186655.670
+377  Dayhoff+R10   1594198.483  441 3189278.967  3189294.396  3192875.126
+390  Dayhoff+F+R10 1590498.527  460 3181917.053  3181933.852  3185668.150
+403  mtREV+R10     1666613.911  441 3334109.821  3334125.251  3337705.981
+416  mtREV+F+R10   1611247.926  460 3223415.853  3223432.651  3227166.949
+429  mtART+R10     1684972.210  441 3370826.420  3370841.850  3374422.580
+442  mtART+F+R10   1625987.489  460 3252894.978  3252911.777  3256646.075
+455  mtZOA+R10     1643701.967  441 3288285.934  3288301.364  3291882.094
+468  mtZOA+F+R10   1604951.067  460 3210822.135  3210838.934  3214573.231
+481  mtMet+R10     1666370.799  441 3333623.598  3333639.028  3337219.758
+494  mtMet+F+R10   1610758.607  460 3222437.215  3222454.014  3226188.311
+507  mtVer+R10     1684478.118  441 3369838.236  3369853.666  3373434.396
+520  mtVer+F+R10   1637762.887  460 3276445.773  3276462.572  3280196.870
+533  mtInv+R10     1670209.700  441 3341301.400  3341316.830  3344897.560
+546  mtInv+F+R10   1596642.007  460 3194204.015  3194220.814  3197955.111
+559  mtMAM+R10     1714224.582  441 3429331.164  3429346.594  3432927.324
+572  mtMAM+F+R10   1657523.184  460 3315966.367  3315983.166  3319717.464
+585  HIVb+R10      1635942.717  441 3272767.433  3272782.863  3276363.593
+598  HIVb+F+R10    1632917.628  460 3266755.256  3266772.055  3270506.353
+611  HIVw+R10      1700419.209  441 3401720.418  3401735.848  3405316.578
+624  HIVw+F+R10    1683670.106  460 3368260.212  3368277.011  3372011.309
+637  FLU+R10       1622381.191  441 3245644.383  3245659.812  3249240.543
+650  FLU+F+R10     1621093.451  460 3243106.901  3243123.700  3246857.998
+663  rtREV+R10     1586431.963  441 3173745.926  3173761.356  3177342.086
+676  rtREV+F+R10   1578614.498  460 3158148.996  3158165.794  3161900.092
+689  cpREV+R10     1590690.357  441 3182262.715  3182278.144  3185858.874
+702  cpREV+F+R10   1592888.427  460 3186696.855  3186713.654  3190447.951
+Akaike Information Criterion:           Q.pfam+R10
+Corrected Akaike Information Criterion: Q.pfam+R10
+Bayesian Information Criterion:         Q.pfam+R10
+Best-fit model: Q.pfam+R10 chosen according to BIC
+
+All model information printed to CyanosEnvironment.fa.model.gz
+CPU time for ModelFinder: 3203143.628 seconds (889h:45m:43s)
+Wall-clock time for ModelFinder: 210712.179 seconds (58h:31m:52s)
+Generating 1000 samples for ultrafast bootstrap (seed: 88500)...
+
+NOTE: 6802 MB RAM (6 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -1572673.110
+2. Current log-likelihood: -1572671.899
+3. Current log-likelihood: -1572670.962
+4. Current log-likelihood: -1572669.787
+5. Current log-likelihood: -1572668.603
+6. Current log-likelihood: -1572667.181
+7. Current log-likelihood: -1572665.571
+8. Current log-likelihood: -1572663.631
+9. Current log-likelihood: -1572661.317
+10. Current log-likelihood: -1572658.805
+11. Current log-likelihood: -1572656.331
+12. Current log-likelihood: -1572654.161
+13. Current log-likelihood: -1572652.288
+14. Current log-likelihood: -1572650.971
+15. Current log-likelihood: -1572650.060
+16. Current log-likelihood: -1572649.271
+17. Current log-likelihood: -1572648.707
+18. Current log-likelihood: -1572648.268
+19. Current log-likelihood: -1572647.908
+20. Current log-likelihood: -1572647.584
+Optimal log-likelihood: -1572647.497
+Site proportion and rates:  (0.102,0.014) (0.088,0.082) (0.114,0.176) (0.146,0.312) (0.158,0.517) (0.137,0.842) (0.098,1.304) (0.074,2.029) (0.045,3.275) (0.036,8.490)
+Parameters optimization took 20 rounds (2560.049 sec)
+Computing ML distances based on estimated model parameters...
+Computing ML distances took 2.392034 sec (of wall-clock time) 36.871798 sec(of CPU time)
+Computing RapidNJ tree took 0.341413 sec (of wall-clock time) 0.000000 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -1578719.931
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 265.742 second
+Computing log-likelihood of 98 initial trees ... 750.987 seconds
+Current best score: -1572647.497
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -1572647.239
+Iteration 10 / LogL: -1572655.316 / Time: 1h:52m:24s
+Iteration 20 / LogL: -1572685.610 / Time: 2h:45m:33s
+Finish initializing candidate tree set (8)
+Current best tree score: -1572647.239 / CPU time: 7043.202
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -1572655.947 / Time: 3h:12m:29s (7h:51m:15s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 34: -1572621.019
+Iteration 40 / LogL: -1572630.388 / Time: 3h:44m:31s (9h:1m:9s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 44: -1572612.622
+Iteration 50 / LogL: -1572728.823 / Time: 4h:14m:9s (8h:7m:34s left)
+Log-likelihood cutoff on original alignment: -1572876.150
+Iteration 60 / LogL: -1572621.094 / Time: 4h:41m:2s (6h:40m:8s left)
+Iteration 70 / LogL: -1572647.912 / Time: 5h:9m:39s (5h:32m:5s left)
+Iteration 80 / LogL: -1572683.839 / Time: 5h:36m:42s (4h:32m:46s left)
+Iteration 90 / LogL: -1572704.052 / Time: 6h:3m:40s (3h:40m:39s left)
+Iteration 100 / LogL: -1572981.000 / Time: 6h:31m:27s (2h:53m:58s left)
+Log-likelihood cutoff on original alignment: -1572876.150
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 1.000
+Iteration 110 / LogL: -1572717.947 / Time: 6h:59m:56s (5h:46m:44s left)
+Iteration 120 / LogL: -1572632.182 / Time: 7h:27m:2s (5h:0m:32s left)
+Iteration 130 / LogL: -1572633.529 / Time: 7h:57m:19s (4h:19m:0s left)
+Iteration 140 / LogL: -1572619.590 / Time: 8h:23m:2s (3h:37m:8s left)
+TREE SEARCH COMPLETED AFTER 145 ITERATIONS / Time: 8h:38m:32s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -1572612.622
+2. Current log-likelihood: -1572612.394
+3. Current log-likelihood: -1572612.181
+4. Current log-likelihood: -1572611.953
+5. Current log-likelihood: -1572611.748
+6. Current log-likelihood: -1572611.528
+7. Current log-likelihood: -1572611.343
+8. Current log-likelihood: -1572611.220
+9. Current log-likelihood: -1572611.042
+10. Current log-likelihood: -1572610.782
+11. Current log-likelihood: -1572610.612
+12. Current log-likelihood: -1572610.426
+13. Current log-likelihood: -1572610.246
+14. Current log-likelihood: -1572610.054
+15. Current log-likelihood: -1572609.889
+16. Current log-likelihood: -1572609.762
+17. Current log-likelihood: -1572609.581
+18. Current log-likelihood: -1572609.446
+19. Current log-likelihood: -1572609.235
+20. Current log-likelihood: -1572609.074
+21. Current log-likelihood: -1572608.858
+22. Current log-likelihood: -1572608.713
+23. Current log-likelihood: -1572608.558
+24. Current log-likelihood: -1572608.399
+25. Current log-likelihood: -1572608.253
+26. Current log-likelihood: -1572608.109
+27. Current log-likelihood: -1572607.994
+28. Current log-likelihood: -1572607.867
+29. Current log-likelihood: -1572607.725
+30. Current log-likelihood: -1572607.578
+31. Current log-likelihood: -1572607.451
+32. Current log-likelihood: -1572607.379
+33. Current log-likelihood: -1572607.259
+34. Current log-likelihood: -1572607.155
+35. Current log-likelihood: -1572607.031
+36. Current log-likelihood: -1572606.926
+37. Current log-likelihood: -1572606.881
+Optimal log-likelihood: -1572606.863
+Site proportion and rates:  (0.101,0.014) (0.088,0.081) (0.116,0.176) (0.148,0.314) (0.158,0.521) (0.137,0.847) (0.098,1.311) (0.074,2.039) (0.044,3.284) (0.036,8.434)
+Parameters optimization took 37 rounds (2591.918 sec)
+BEST SCORE FOUND : -1572606.863
+
+Testing tree branches by SH-like aLRT with 1000 replicates...
+40.917 sec.
+Creating bootstrap support values...
+Split supports printed to NEXUS file CyanosEnvironment.fa.splits.nex
+Total tree length: 74.059
+
+Total number of iterations: 145
+CPU time used for tree search: 440368.812 sec (122h:19m:28s)
+Wall-clock time used for tree search: 28221.291 sec (7h:50m:21s)
+Total CPU time used: 524599.064 sec (145h:43m:19s)
+Total wall-clock time used: 33747.285 sec (9h:22m:27s)
+
+Computing bootstrap consensus tree...
+Reading input file CyanosEnvironment.fa.splits.nex...
+213 taxa and 525 splits.
+Consensus tree written to CyanosEnvironment.fa.contree
+Reading input trees file CyanosEnvironment.fa.contree
+Log-likelihood of consensus tree: -1572606.890
+
+Analysis results written to: 
+  IQ-TREE report:                CyanosEnvironment.fa.iqtree
+  Maximum-likelihood tree:       CyanosEnvironment.fa.treefile
+  Likelihood distances:          CyanosEnvironment.fa.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          CyanosEnvironment.fa.splits.nex
+  Consensus tree:                CyanosEnvironment.fa.contree
+  Screen log file:               CyanosEnvironment.fa.log
+
+Date and Time: Fri Oct  4 09:24:20 2024
