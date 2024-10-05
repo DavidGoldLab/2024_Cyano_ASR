@@ -3,8 +3,10 @@ packageVersion("phytools")
 # 2.0.13
 
 # Load the data
-tree <- read.tree(file = "2_Bacteria_71_AnivoAlign.tree")
-character_matrix <- read.table("2_Bacteria_71_Ancestral_States.txt", header = TRUE, row.names = 1, sep = "\t")
+# Copied and renamed tree ./1_Tree_Building/CyanosEnvironment.fa.contree > 2_Bacteria_213.tree
+# Converted 2_Bacteria_213_Ancestral_States.xlsx into txt (replaced all "-" characters with "_" to match tree)
+tree <- read.tree(file = "2_Bacteria_213.tree")
+character_matrix <- read.table("2_Bacteria_213_Ancestral_States.txt", header = TRUE, row.names = 1, sep = "\t")
 
 #####
 # QC
@@ -15,12 +17,24 @@ if (Ntip(tree) != nrow(character_matrix)) {
   stop("Number of tips in the tree and rows in the discrete trait matrix do not match.")
 }
 
+# Check if tree IDs match IDs in text file
+tree_ids <- tree$tip.label
+text_ids <- rownames(character_matrix)
+matching_ids <- intersect(tree_ids, text_ids)
+missing_in_text <- setdiff(tree_ids, text_ids)
+missing_in_tree <- setdiff(text_ids, tree_ids)
+cat("\nIDs in tree file but not in text file:\n")
+print(missing_in_text)
+cat("\nIDs in text file but not in tree file:\n")
+print(missing_in_tree)
+
+
 # ########################
 # # Perform ASR (1 sample)
 # ########################
 # 
 # # Specify the column name you want to include
-# column_name <- "Host_Associated"
+# column_name <- "Air"
 # # Extract the specified column as a vector while preserving row names
 # modified_vector <- character_matrix[, column_name, drop = FALSE]
 # # Extract the specified column as a numeric vector while preserving row names
@@ -46,9 +60,9 @@ if (Ntip(tree) != nrow(character_matrix)) {
 ############################
 
 # List of column names
-column_names <- c("Air", "Brackish", "Cultivated", "Food", "Fracking_Well", "Freshwater", 
-                  "Glacial", "Host_Associated", "Hydrothermal", "Marine", "Plant_Associated", 
-                  "soil_sediment_rock", "Unknown", "Wastewater", "Wetland")
+column_names <- c("Air","brackish","Cultivated","Food","freshwater",
+	"host_associated","hydrothermal","marine","Plant_Associated",
+	"soil","unknown","wastewater","other")
 
 # Loop over each column
 for (column_name in column_names) {
@@ -156,3 +170,6 @@ anova(Freshwater.er_model,Freshwater.er_hrm,Freshwater.ard_model,Freshwater.ard_
 # Freshwater.er_hrm    -50.68841    3 107.3768 0.78222047
 # Freshwater.ard_model -53.81283    2 111.6257 0.09347721
 # Freshwater.ard_hrm   -48.97702    8 113.9540 0.02918126
+
+# Session info
+sessionInfo
