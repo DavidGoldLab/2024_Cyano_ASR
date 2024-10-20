@@ -1,5 +1,5 @@
 library(phytools)
-packageVersion("phytools")
+library(corHMM)
 
 # Load the data
 # Copied and renamed tree ./1_Tree_Building/CyanosEnvironment.fa.contree > 2_Bacteria_213.tree
@@ -55,7 +55,7 @@ print(missing_in_tree)
 # dev.off()
 
 ############################
-# Perform ASR (all samples)
+# Perform ASR (phytools)
 ############################
 
 # List of column names
@@ -63,7 +63,8 @@ column_names <- c("Air","brackish","Cultivated","Food","freshwater",
 	"host_associated","hydrothermal","marine","Plant_Associated",
 	"soil","unknown","wastewater","other")
 
-# Loop over each column
+# ASR for ER model
+
 for (column_name in column_names) {
   # Extract the specified column as a numeric vector while preserving row names
   modified_vector <- as.numeric(character_matrix[, column_name])
@@ -112,40 +113,74 @@ for (column_name in column_names) {
   dev.off()
 }
 
-# Repeat for ARD Hidden Rate Model
+
+###############################################
+# Get node summaries (used for select analyses)
+###############################################
+
+# summarize the results
+summary <- describe.simmap(sim_result)
+# See posterior probabilities of nodes
+summary[["ace"]]
+
+###############################################
+# Perform ASR with Hidden Rate Models (CorHMM)
+###############################################
+
+# List of column names
+column_names <- c("Air","brackish","Cultivated","Food","freshwater",
+	"host_associated","hydrothermal","marine","Plant_Associated",
+	"soil","unknown","wastewater","other")
+
+# ASR HRM for ER model
 
 for (column_name in column_names) {
-  # Extract the specified column as a numeric vector while preserving row names
+  # Extract the specified column as a vector while preserving row names
+  modified_vector <- character_matrix[, column_name, drop = FALSE]
+  # Convert the specified column to a numeric vector
   modified_vector <- as.numeric(character_matrix[, column_name])
   # Check for non-numeric elements or missing values
   if (any(is.na(modified_vector)) || any(!is.finite(modified_vector))) {
     stop("Vector contains non-numeric or missing values.")
   }
-  # Assign row names to the modified vector
-  names(modified_vector) <- rownames(character_matrix)
-  # Define the hidden rate model parameters
-  hrm_fit <- fitHRM(tree, modified_vector, rate.cat = 2, model = "ARD")
-  # Perform stochastic character mapping (ARD Model)
-  sim_result <- make.simmap(tree, modified_vector, model = "hrm_fit", pi="estimated", nsim = 1000)
-  # Export density map as PDF
-  pdf_name <- paste("density_map_simulation-", column_name, "-ARDhrm_Model.pdf", sep = "")
+  # Create a data frame with species names and trait values
+  data <- data.frame(species = rownames(character_matrix), trait = modified_vector)
+  # Fit the ARD Model with Hidden Rates
+  result <- corHMM(tree, data, rate.cat = 2, model = "ER")
+  # Visualize the ancestral state reconstruction
+  pdf_name <- paste("node_summary-", column_name, "-ER-HRM_Model.pdf", sep = "")
   pdf(pdf_name, width = 8, height = 10)
-  density_map <- densityMap(sim_result, fsize = 0.5)
-  dev.off()
-  # Export summary results as PDF
-  pdf_name <- paste("node_summary-", column_name, "-ARDhrm_Model.pdf", sep = "")
-  pdf(pdf_name, width = 8, height = 10)
-  summary <- plot(summary(sim_result), fsize = 0.5)
+  #  Plot density map
+  plotRECON(tree, result$states, piecolors=NULL, cex=0.5, pie.cex=0.25, height=11, width=8.5, show.tip.label=TRUE)
+  # Close the PDF device
   dev.off()
 }
 
-###############################################
-# Get node summaries (used for select analyses)
-###############################################
-# summarize the results
-summary <- describe.simmap(sim_result)
-# See posterior probabilities of nodes
-summary[["ace"]]
+# ASR HRM for ARD model
+
+for (column_name in column_names) {
+  # Extract the specified column as a vector while preserving row names
+  modified_vector <- character_matrix[, column_name, drop = FALSE]
+  # Convert the specified column to a numeric vector
+  modified_vector <- as.numeric(character_matrix[, column_name])
+  # Check for non-numeric elements or missing values
+  if (any(is.na(modified_vector)) || any(!is.finite(modified_vector))) {
+    stop("Vector contains non-numeric or missing values.")
+  }
+  # Create a data frame with species names and trait values
+  data <- data.frame(species = rownames(character_matrix), trait = modified_vector)
+  # Fit the ARD Model with Hidden Rates
+  result <- corHMM(tree, data, rate.cat = 2, model = "ARD")
+  # Visualize the ancestral state reconstruction
+  pdf_name <- paste("node_summary-", column_name, "-ARD-HRM_Model.pdf", sep = "")
+  pdf(pdf_name, width = 8, height = 10)
+  #  Plot density map
+  plotRECON(tree, result$states, piecolors=NULL, cex=0.5, pie.cex=0.25, height=11, width=8.5, show.tip.label=TRUE)
+  # Close the PDF device
+  dev.off()
+}
+
+
 
 #######################
 # Model fit comparison
